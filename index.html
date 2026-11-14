@@ -381,6 +381,15 @@ footer p { font-size: 13px; color: #c6d6c9; margin-top: 8px; }
       <textarea id="message" placeholder="अपनी जरूरत या सवाल लिखें"></textarea>
 
       <button type="submit" class="btn">WhatsApp पर बुकिंग भेजें</button>
+      <div id="bookingLinks" style="display:none; margin-top:20px;">
+  <p style="font-weight:bold; margin-bottom:10px;">
+    अपना बुकिंग मैसेज दोनों नंबरों पर भेजें:
+  </p>
+  <a id="sendSantosh" class="btn" target="_blank"
+     rel="noopener">संतोष सिंह चौहान को भेजें</a>
+  <a id="sendDhirendra" class="btn" target="_blank"
+     rel="noopener">धीरेन्द्र सिंह राठौर को भेजें</a>
+</div>
     </form>
   </div>
 </section>
@@ -459,6 +468,40 @@ function sendBooking(event) {
   );
 }
 </script>
+const SANTOSH_NUMBER = "919926089432";
+const DHIRENDRA_NUMBER = "919926732449";
 
+// सामान्य WhatsApp बटन
+document.getElementById("whatsappLink").href =
+  "https://wa.me/" + SANTOSH_NUMBER;
+
+function sendBooking(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("customer").value;
+  const mobile = document.getElementById("mobile").value;
+  const crop = document.getElementById("crop").value;
+  const quantity = document.getElementById("quantity").value;
+  const message = document.getElementById("message").value;
+
+  const text =
+    "नमस्ते श्री अनंता ग्रीन नर्सरी!\n\n" +
+    "मुझे पौधों की बुकिंग करनी है।\n" +
+    "नाम: " + name + "\n" +
+    "मोबाइल: " + mobile + "\n" +
+    "फसल: " + crop + "\n" +
+    "पौधों की संख्या: " + quantity + "\n" +
+    "जानकारी: " + message;
+
+  const encodedMessage = encodeURIComponent(text);
+
+  document.getElementById("sendSantosh").href =
+    "https://wa.me/" + SANTOSH_NUMBER + "?text=" + encodedMessage;
+
+  document.getElementById("sendDhirendra").href =
+    "https://wa.me/" + DHIRENDRA_NUMBER + "?text=" + encodedMessage;
+
+  document.getElementById("bookingLinks").style.display = "block";
+}
 </body>
 </html>
