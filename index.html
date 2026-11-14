@@ -398,7 +398,15 @@ footer p { font-size: 13px; color: #c6d6c9; margin-top: 8px; }
   <div class="container">
     <div class="section-title">
       <h2>संपर्क करें | Contact Us</h2>
-      <h3>📞 Contact Us</h3>
+      <p>हमसे जुड़ें और अपनी पौधों की जरूरत बताएं।</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>📍 Nursery Address</h3>
+        <p>शाहपुरा, गोगावा, हनुमान मंदिर के पीछे, खरगोन, मध्य प्रदेश, भारत</p>
+        <br>
+        <h3>📞 Contact</h3>
+        <h3>📞 Contact Us</h3>
 
 <p><b>संतोष सिंह चौहान</b></p>
 <p>
@@ -415,17 +423,6 @@ footer p { font-size: 13px; color: #c6d6c9; margin-top: 8px; }
   |
   <a href="https://wa.me/919926732449" target="_blank">WhatsApp</a>
 </p>
-      <p>हमसे जुड़ें और अपनी पौधों की जरूरत बताएं।</p>
-    </div>
-    <div class="contact-grid">
-      <div class="contact-card">
-        <h3>📍 Nursery Address</h3>
-        <p>शाहपुरा, गोगावा, हनुमान मंदिर के पीछे, खरगोन, मध्य प्रदेश, भारत</p>
-        <br>
-        <h3>📞 Contact</h3>
-        <p>संतोष सिंह चौहान</p>
-        <p>धीरेंद्र सिंह राठौर</p>
-        <p>मोबाइल नंबर जल्द अपडेट होंगे।</p>
       </div>
       <div class="contact-card">
         <h3>🌿 Our Mission</h3>
@@ -450,41 +447,6 @@ footer p { font-size: 13px; color: #c6d6c9; margin-top: 8px; }
 <a class="whatsapp" id="whatsappLink" href="https://wa.me/91XXXXXXXXXX" target="_blank">WhatsApp</a>
 
 <script>
-// अपना 10 अंकों का WhatsApp नंबर यहां डालें
-const WHATSAPP_NUMBER = "91XXXXXXXXXX";
-
-document.getElementById("whatsappLink").href =
-  "https://wa.me/" + WHATSAPP_NUMBER;
-
-function sendBooking(event) {
-  event.preventDefault();
-
-  const name = document.getElementById("customer").value;
-  const mobile = document.getElementById("mobile").value;
-  const crop = document.getElementById("crop").value;
-  const quantity = document.getElementById("quantity").value;
-  const message = document.getElementById("message").value;
-
-  const text =
-    "नमस्ते श्री अनंता ग्रीन नर्सरी!\n\n" +
-    "मुझे पौधों की बुकिंग करनी है।\n" +
-    "नाम: " + name + "\n" +
-    "मोबाइल: " + mobile + "\n" +
-    "फसल: " + crop + "\n" +
-    "पौधों की संख्या: " + quantity + "\n" +
-    "जानकारी: " + message;
-
-  if (WHATSAPP_NUMBER === "91XXXXXXXXXX") {
-    alert("कृपया पहले वेबसाइट के कोड में अपना WhatsApp नंबर अपडेट करें।");
-    return;
-  }
-
-  window.open(
-    "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(text),
-    "_blank"
-  );
-}
-</script>
 const SANTOSH_NUMBER = "919926089432";
 const DHIRENDRA_NUMBER = "919926732449";
 
@@ -520,5 +482,7 @@ function sendBooking(event) {
 
   document.getElementById("bookingLinks").style.display = "block";
 }
+</script>
+
 </body>
 </html>
