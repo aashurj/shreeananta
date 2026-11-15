@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="श्री अनंता ग्रीन नर्सरी - पॉलीहाउस में तैयार स्वस्थ एवं गुणवत्तापूर्ण सब्जियों और फलदार फसलों के पौधे।">
+<meta name="theme-color" content="#174d32">
+<title>श्री अनंता ग्रीन नर्सरी | Shri Ananta Green Nursery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--green:#17613b;--deep:#103d29;--leaf:#70ad43;--mint:#eff7ed;--cream:#fbfcf7;--ink:#20372a;--muted:#637268;--gold:#e4b95d;--shadow:0 16px 45px rgba(20,65,40,.11)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{font-family:'Hind','Poppins',sans-serif;color:var(--ink);line-height:1.8;background:#fff;font-size:17px}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{width:min(1160px,91%);margin:auto}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);box-shadow:0 4px 24px #153e2410;border-bottom:1px solid #e9f0e8}
+.nav{min-height:94px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:15px;min-width:0}
+.brand img{width:76px;height:76px;object-fit:contain;border-radius:13px}
+.brand-name{color:var(--deep);font-weight:800;font-size:clamp(21px,2.3vw,30px);line-height:1.25}
+.brand-name span{display:block;font-family:'Poppins',sans-serif;font-size:clamp(11px,1.1vw,14px);letter-spacing:1.7px;color:var(--green);font-weight:700;margin-top:5px}
+nav{display:flex;align-items:center;gap:22px}
+nav a{font-size:16px;font-weight:600;color:#294534;transition:.2s}
+nav a:hover{color:var(--leaf)}
+.menu-btn{display:none;background:var(--green);color:#fff;border:0;border-radius:10px;padding:9px 14px;font-size:23px}
+.hero{min-height:610px;display:flex;align-items:center;color:white;position:relative;background:linear-gradient(90deg,rgba(9,45,27,.91),rgba(12,55,32,.68) 52%,rgba(12,55,32,.18)),url('images/nursery-03.jpeg') center/cover}
+.hero-content{padding:95px 0;max-width:780px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:#f8df9b;font-family:'Poppins',sans-serif;font-size:14px;font-weight:700;letter-spacing:2px;text-transform:uppercase}
+.eyebrow:before{content:'';width:34px;height:2px;background:var(--gold)}
+.hero h1{font-size:clamp(38px,5.3vw,66px);line-height:1.2;margin:20px 0 18px;font-weight:700}
+.hero p{font-size:clamp(18px,2vw,22px);max-width:650px;color:#f2f8f1}
+.hero-actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:28px}
+.btn{display:inline-flex;justify-content:center;align-items:center;padding:13px 25px;border-radius:9px;background:var(--leaf);color:white;font-weight:700;font-size:17px;border:0;cursor:pointer;transition:.2s;box-shadow:0 7px 18px #0002}
+.btn:hover{transform:translateY(-2px);background:var(--green)}
+.btn-light{background:#fff;color:var(--deep)}
+.btn-light:hover{background:#edf7e9;color:var(--deep)}
+section{padding:86px 0}
+.section-heading{text-align:center;margin-bottom:46px}
+.kicker{font-family:'Poppins',sans-serif;color:var(--leaf);font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase}
+.section-heading h2{font-size:clamp(30px,3.5vw,42px);line-height:1.3;color:var(--deep);margin:8px 0}
+.section-heading p{color:var(--muted);font-size:18px}
+.about-wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:54px;align-items:center}
+.about-photo{position:relative}
+.about-photo img{width:100%;height:440px;object-fit:cover;border-radius:22px;box-shadow:var(--shadow)}
+.photo-tag{position:absolute;bottom:20px;left:20px;background:#fff;color:var(--green);padding:12px 18px;border-radius:12px;font-weight:700;box-shadow:var(--shadow)}
+.about-copy h2{font-size:clamp(29px,3vw,39px);color:var(--deep);line-height:1.3;margin-bottom:17px}
+.about-copy p{font-size:18px;margin-bottom:14px;color:#526457}
+.about-copy .lead{font-size:20px;color:var(--ink);font-weight:600}
+.check-list{list-style:none;margin:20px 0}
+.check-list li{padding:10px 0;border-bottom:1px solid #e8efe7;font-size:18px}
+.products-section,.gallery-section{background:var(--mint)}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+.product-card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 8px 28px #174b2a0d;transition:.25s;border:1px solid #edf2eb}
+.product-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.product-card img{width:100%;height:230px;object-fit:cover;background:#e8f1e6}
+.product-info{padding:20px 22px 23px}
+.product-info h3{font-size:23px;color:var(--deep);line-height:1.35}
+.product-info p{font-size:17px;color:var(--muted);margin-top:7px}
+.features-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.feature-card{display:flex;gap:18px;align-items:flex-start;padding:25px;background:#fff;border:1px solid #e6eee4;border-radius:16px;box-shadow:0 8px 25px #174b2a08}
+.feature-icon{flex:0 0 54px;height:54px;display:grid;place-items:center;border-radius:15px;background:#eaf5e4;font-size:28px}
+.feature-card h3{font-size:21px;color:var(--deep);margin-bottom:5px}
+.feature-card p{font-size:17px;color:var(--muted)}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}
+.gallery-grid a{overflow:hidden;border-radius:14px;background:#fff;box-shadow:0 5px 18px #174b2a12}
+.gallery-grid img{width:100%;height:220px;object-fit:cover;transition:transform .35s}
+.gallery-grid a:hover img{transform:scale(1.06)}
+.booking-section{background:linear-gradient(135deg,#103d29,#267447);color:white}
+.booking-section .section-heading h2{color:white}
+.booking-section .section-heading p{color:#e3f0e3}
+.form{max-width:720px;margin:auto;background:#fff;color:var(--ink);padding:34px;border-radius:20px;box-shadow:0 20px 60px #062b1740}
+.form label{display:block;margin:14px 0 6px;font-weight:700;font-size:17px}
+.form input,.form select,.form textarea{width:100%;padding:13px 15px;border:1px solid #d9e3d8;border-radius:9px;font:inherit;font-size:17px;background:#fcfefb;color:var(--ink)}
+.form input:focus,.form select:focus,.form textarea:focus{outline:2px solid #a5ce8b;border-color:var(--leaf)}
+.form textarea{min-height:100px;resize:vertical}
+.form button{width:100%;margin-top:22px}
+.booking-links{display:none;margin-top:22px;padding-top:18px;border-top:1px solid #e7eee5}
+.booking-links p{font-weight:700;margin-bottom:10px}
+.booking-links .btn{margin:5px 7px 0 0;font-size:15px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.contact-card{background:var(--mint);padding:30px;border-radius:18px;border:1px solid #e4eee1}
+.contact-card h3{font-size:23px;color:var(--deep);margin-bottom:9px}
+.contact-card p,.contact-card a{font-size:18px}
+.contact-card a{color:var(--green);font-weight:700}
+.contact-person{padding:14px 0;border-top:1px solid #dce9d9;margin-top:12px}
+footer{background:#0d3020;color:#fff;text-align:center;padding:38px 0}
+footer h3{font-size:25px}
+footer p{font-size:15px;color:#c9ddcb;margin-top:5px}
+.whatsapp{position:fixed;right:20px;bottom:20px;z-index:40;background:#20b95a;color:#fff;padding:13px 20px;border-radius:40px;font-weight:700;font-size:16px;box-shadow:0 6px 22px #0003}
+@media(max-width:900px){nav{gap:13px}.brand img{width:65px;height:65px}.product-grid{grid-template-columns:repeat(2,1fr)}.gallery-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.nav{min-height:80px;flex-wrap:wrap;padding:9px 0}.brand img{width:58px;height:58px}.brand-name{font-size:20px}.brand-name span{font-size:10px}.menu-btn{display:block}nav{display:none;width:100%;flex-direction:column;align-items:flex-start;padding:10px 0 15px;gap:10px}nav.show{display:flex}nav a{font-size:17px}.hero{min-height:530px}.hero-content{padding:75px 0}.about-wrap,.contact-grid{grid-template-columns:1fr}.about-photo img{height:330px}.features-grid{grid-template-columns:1fr}.gallery-grid{grid-template-columns:repeat(2,1fr)}section{padding:65px 0}}
+@media(max-width:460px){body{font-size:16px}.container{width:92%}.brand{gap:9px}.brand img{width:49px;height:49px}.brand-name{font-size:17px}.brand-name span{font-size:9px;letter-spacing:1px}.hero h1{font-size:38px}.product-grid{grid-template-columns:1fr}.gallery-grid img{height:165px}.form{padding:22px}.hero-actions .btn{width:100%}.whatsapp{right:12px;bottom:12px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="Shri Ananta Green Nursery Home">
+      <img src="images/logo.png" alt="श्री अनंता ग्रीन नर्सरी लोगो">
+      <span class="brand-name">श्री अनंता ग्रीन नर्सरी<span>SHRI ANANTA GREEN NURSERY</span></span>
+    </a>
+    <button class="menu-btn" aria-label="मेन्यू खोलें" onclick="document.querySelector('nav').classList.toggle('show')">☰</button>
+    <nav>
+      <a href="#home">होम | Home</a><a href="#about">हमारे बारे में</a><a href="#products">उत्पाद</a>
+      <a href="#features">विशेषताएँ</a><a href="#gallery">गैलरी</a><a href="#booking">बुकिंग</a><a href="#contact">संपर्क</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="hero" id="home"><div class="container hero-content">
+  <div class="eyebrow">Grow Healthy • Grow Better</div>
+  <h1>श्री अनंता ग्रीन नर्सरी</h1>
+  <p>किसानों की समृद्धि के लिए स्वस्थ, मजबूत और गुणवत्तापूर्ण पौधे।<br>Quality Seedlings for a Better Agricultural Future.</p>
+  <div class="hero-actions"><a href="#products" class="btn">हमारे पौधे देखें</a><a href="#booking" class="btn btn-light">पौधों की बुकिंग करें</a></div>
+</div></section>
+
+<section id="about"><div class="container about-wrap">
+  <div class="about-photo"><img src="images/nursery-03.jpeg" alt="श्री अनंता ग्रीन नर्सरी का पॉलीहाउस"><div class="photo-tag">🌱 आधुनिक पॉलीहाउस नर्सरी</div></div>
+  <div class="about-copy">
+    <div class="kicker">Who We Are</div><h2>हमारे बारे में | About Us</h2>
+    <p class="lead"><strong>श्री अनंता ग्रीन नर्सरी</strong> 🌿</p>
+    <p>हमारे पॉलीहाउस में तैयार हर पौधा विज्ञान और समर्पण का नमूना है! 🌱 यहाँ आपको मिलेंगे:</p>
+    <ul class="check-list">
+      <li>✅ <strong>स्वस्थ और ओजस्वी पौधे</strong> – कीटनाशकों का न्यूनतम उपयोग, अधिकतम पोषण!</li>
+      <li>✅ <strong>साल भर उपलब्धता</strong> – मौसम की मार से मुक्त, हर मौसम में हरियाली।</li>
+    </ul>
+    <a href="#contact" class="btn">हमसे संपर्क करें</a>
+  </div>
+</div></section>
+
+<section class="products-section" id="products"><div class="container">
+  <div class="section-heading"><div class="kicker">Our Products</div><h2>हमारे उत्पाद | Our Products</h2><p>आपकी फसल के लिए गुणवत्तापूर्ण पौधे</p></div>
+  <div class="product-grid">
+    <article class="product-card"><img src="images/nursery-20.jpeg" alt="लाल मिर्च"><div class="product-info"><h3>मिर्च | Chilli</h3><p>स्वस्थ एवं मजबूत मिर्च के पौधे।</p></div></article>
+    <article class="product-card"><img src="images/nursery-04.jpeg" alt="तरबूज बुकिंग पोस्टर"><div class="product-info"><h3>तरबूज | Watermelon</h3><p>तरबूज की पौध के लिए बुकिंग उपलब्ध।</p></div></article>
+    <article class="product-card"><img src="images/nursery-01.jpeg" alt="स्वस्थ पौध की जड़ और पौधा"><div class="product-info"><h3>खरबूजा | Muskmelon</h3><p>स्वस्थ एवं एकसमान पौधे।</p></div></article>
+    <article class="product-card"><img src="images/nursery-02.jpeg" alt="पॉलीबैग में तैयार पौधे"><div class="product-info"><h3>पपीता | Papaya</h3><p>फलदार फसलों के लिए तैयार पौधे।</p></div></article>
+    <article class="product-card"><img src="images/nursery-19.jpeg" alt="लाल टमाटर"><div class="product-info"><h3>टमाटर | Tomato</h3><p>मजबूत एवं स्वस्थ टमाटर के पौधे।</p></div></article>
+    <article class="product-card"><img src="images/nursery-25.jpeg" alt="फूलगोभी"><div class="product-info"><h3>फूलगोभी | Cauliflower</h3><p>गुणवत्तापूर्ण फूलगोभी की पौध।</p></div></article>
+    <article class="product-card"><img src="images/nursery-16.jpeg" alt="गेंदा फूल"><div class="product-info"><h3>गेंदा | Marigold</h3><p>फूलों की फसलों के लिए पौधे।</p></div></article>
+    <article class="product-card"><img src="images/nursery-21.jpeg" alt="हरी मिर्च"><div class="product-info"><h3>हरी मिर्च | Green Chilli</h3><p>हरी मिर्च की फसल के लिए पौधे।</p></div></article>
+    <article class="product-card"><img src="images/nursery-28.jpeg" alt="हरी सब्जियों की पौध"><div class="product-info"><h3>अन्य सब्जियाँ | Other Vegetables</h3><p>बैंगन, टिंडा, पत्तागोभी एवं अन्य फसलें।</p></div></article>
+  </div>
+</div></section>
+
+<section id="features"><div class="container">
+  <div class="section-heading"><div class="kicker">Our Strength</div><h2>हमारी विशेषताएँ | Why Choose Us</h2><p>गुणवत्ता, देखभाल और किसानों के प्रति समर्पण</p></div>
+  <div class="features-grid">
+    <article class="feature-card"><div class="feature-icon">🏡</div><div><h3>1. उन्नत तकनीक</h3><p>200 माइक्रॉन प्लास्टिक और कीट-अवरोधी नेट से सुरक्षित संरचना।</p></div></article>
+    <article class="feature-card"><div class="feature-icon">🌱</div><div><h3>2. स्वस्थ पौधे</h3><p>बीमारी-मुक्त, समान आकार और ऊर्जा से भरपूर पौधे।</p></div></article>
+    <article class="feature-card"><div class="feature-icon">🌿</div><div><h3>3. पर्यावरण अनुकूल</h3><p>कम पानी, कम रसायन, अधिक हरियाली!</p></div></article>
+    <article class="feature-card"><div class="feature-icon">🤝</div><div><h3>4. विशेषज्ञ मार्गदर्शन</h3><p>पौधों की देखभाल के टिप्स और ट्रिक्स हमारे साथ।</p></div></article>
+  </div>
+</div></section>
+
+<section class="gallery-section" id="gallery"><div class="container">
+  <div class="section-heading"><div class="kicker">Photo Gallery</div><h2>हमारी गैलरी | Our Gallery</h2><p>श्री अनंता ग्रीन नर्सरी की 29 ओरिजिनल तस्वीरें</p></div>
+  <div class="gallery-grid">
+    <a href="images/nursery-01.jpeg" target="_blank"><img src="images/nursery-01.jpeg" alt="नर्सरी फोटो 1" loading="lazy"></a>
+    <a href="images/nursery-02.jpeg" target="_blank"><img src="images/nursery-02.jpeg" alt="नर्सरी फोटो 2" loading="lazy"></a>
+    <a href="images/nursery-03.jpeg" target="_blank"><img src="images/nursery-03.jpeg" alt="नर्सरी फोटो 3" loading="lazy"></a>
+    <a href="images/nursery-04.jpeg" target="_blank"><img src="images/nursery-04.jpeg" alt="नर्सरी फोटो 4" loading="lazy"></a>
+    <a href="images/nursery-05.jpeg" target="_blank"><img src="images/nursery-05.jpeg" alt="नर्सरी फोटो 5" loading="lazy"></a>
+    <a href="images/nursery-06.jpeg" target="_blank"><img src="images/nursery-06.jpeg" alt="नर्सरी फोटो 6" loading="lazy"></a>
+    <a href="images/nursery-07.jpeg" target="_blank"><img src="images/nursery-07.jpeg" alt="नर्सरी फोटो 7" loading="lazy"></a>
+    <a href="images/nursery-08.jpeg" target="_blank"><img src="images/nursery-08.jpeg" alt="नर्सरी फोटो 8" loading="lazy"></a>
+    <a href="images/nursery-09.jpeg" target="_blank"><img src="images/nursery-09.jpeg" alt="नर्सरी फोटो 9" loading="lazy"></a>
+    <a href="images/nursery-10.jpeg" target="_blank"><img src="images/nursery-10.jpeg" alt="नर्सरी फोटो 10" loading="lazy"></a>
+    <a href="images/nursery-11.jpeg" target="_blank"><img src="images/nursery-11.jpeg" alt="नर्सरी फोटो 11" loading="lazy"></a>
+    <a href="images/nursery-12.jpeg" target="_blank"><img src="images/nursery-12.jpeg" alt="नर्सरी फोटो 12" loading="lazy"></a>
+    <a href="images/nursery-13.jpeg" target="_blank"><img src="images/nursery-13.jpeg" alt="नर्सरी फोटो 13" loading="lazy"></a>
+    <a href="images/nursery-14.jpeg" target="_blank"><img src="images/nursery-14.jpeg" alt="नर्सरी फोटो 14" loading="lazy"></a>
+    <a href="images/nursery-15.jpeg" target="_blank"><img src="images/nursery-15.jpeg" alt="नर्सरी फोटो 15" loading="lazy"></a>
+    <a href="images/nursery-16.jpeg" target="_blank"><img src="images/nursery-16.jpeg" alt="नर्सरी फोटो 16" loading="lazy"></a>
+    <a href="images/nursery-17.jpeg" target="_blank"><img src="images/nursery-17.jpeg" alt="नर्सरी फोटो 17" loading="lazy"></a>
+    <a href="images/nursery-18.jpeg" target="_blank"><img src="images/nursery-18.jpeg" alt="नर्सरी फोटो 18" loading="lazy"></a>
+    <a href="images/nursery-19.jpeg" target="_blank"><img src="images/nursery-19.jpeg" alt="नर्सरी फोटो 19" loading="lazy"></a>
+    <a href="images/nursery-20.jpeg" target="_blank"><img src="images/nursery-20.jpeg" alt="नर्सरी फोटो 20" loading="lazy"></a>
+    <a href="images/nursery-21.jpeg" target="_blank"><img src="images/nursery-21.jpeg" alt="नर्सरी फोटो 21" loading="lazy"></a>
+    <a href="images/nursery-22.jpeg" target="_blank"><img src="images/nursery-22.jpeg" alt="नर्सरी फोटो 22" loading="lazy"></a>
+    <a href="images/nursery-23.jpeg" target="_blank"><img src="images/nursery-23.jpeg" alt="नर्सरी फोटो 23" loading="lazy"></a>
+    <a href="images/nursery-24.jpeg" target="_blank"><img src="images/nursery-24.jpeg" alt="नर्सरी फोटो 24" loading="lazy"></a>
+    <a href="images/nursery-25.jpeg" target="_blank"><img src="images/nursery-25.jpeg" alt="नर्सरी फोटो 25" loading="lazy"></a>
+    <a href="images/nursery-26.jpeg" target="_blank"><img src="images/nursery-26.jpeg" alt="नर्सरी फोटो 26" loading="lazy"></a>
+    <a href="images/nursery-27.jpeg" target="_blank"><img src="images/nursery-27.jpeg" alt="नर्सरी फोटो 27" loading="lazy"></a>
+    <a href="images/nursery-28.jpeg" target="_blank"><img src="images/nursery-28.jpeg" alt="नर्सरी फोटो 28" loading="lazy"></a>
+    <a href="images/nursery-29.jpeg" target="_blank"><img src="images/nursery-29.jpeg" alt="नर्सरी फोटो 29" loading="lazy"></a>
+  </div>
+</div></section>
+
+<section class="booking-section" id="booking"><div class="container">
+  <div class="section-heading"><div class="kicker" style="color:#d9edbd">Plant Booking</div><h2>पौधों की बुकिंग | Plant Booking</h2><p>अपनी जरूरत के अनुसार पौधों की बुकिंग करें।</p></div>
+  <form class="form" onsubmit="sendBooking(event)">
+    <label for="customer">आपका नाम | Your Name</label><input id="customer" type="text" placeholder="अपना नाम लिखें" required>
+    <label for="mobile">मोबाइल नंबर | Mobile Number</label><input id="mobile" type="tel" pattern="[0-9]{10}" placeholder="10 अंकों का मोबाइल नंबर" required>
+    <label for="crop">फसल चुनें | Select Crop</label><select id="crop" required>
+      <option value="">फसल चुनें</option><option>मिर्च | Chilli</option><option>तरबूज | Watermelon</option><option>खरबूजा | Muskmelon</option><option>पपीता | Papaya</option><option>टमाटर | Tomato</option><option>बैंगन | Brinjal</option><option>फूलगोभी | Cauliflower</option><option>गेंदा | Marigold</option><option>अन्य | Other</option>
+    </select>
+    <label for="quantity">पौधों की संख्या | Quantity</label><input id="quantity" type="number" min="1" placeholder="कितने पौधे चाहिए?" required>
+    <label for="message">अन्य जानकारी | Message</label><textarea id="message" placeholder="अपनी जरूरत या सवाल लिखें"></textarea>
+    <button type="submit" class="btn">WhatsApp पर बुकिंग भेजें</button>
+    <div id="bookingLinks" class="booking-links"><p>अपना बुकिंग मैसेज संबंधित व्यक्ति को भेजें:</p>
+      <a id="sendSantosh" class="btn" target="_blank" rel="noopener">संतोष सिंह चौहान को भेजें</a>
+      <a id="sendDhirendra" class="btn" target="_blank" rel="noopener">धीरेंद्र सिंह राठौर को भेजें</a>
+    </div>
+  </form>
+</div></section>
+
+<section id="contact"><div class="container">
+  <div class="section-heading"><div class="kicker">Get In Touch</div><h2>संपर्क करें | Contact Us</h2><p>अपनी पौधों की जरूरत के लिए हमसे संपर्क करें।</p></div>
+  <div class="contact-grid">
+    <div class="contact-card"><h3>📍 नर्सरी का पता</h3><p>शाहपुरा, गोगावा, हनुमान मंदिर के पीछे, खरगोन, मध्य प्रदेश, भारत</p>
+      <div class="contact-person"><h3>📞 संतोष सिंह चौहान</h3><p><a href="tel:+919926089432">99260-89432</a>　|　<a href="https://wa.me/919926089432" target="_blank" rel="noopener">WhatsApp</a></p></div>
+      <div class="contact-person"><h3>📞 धीरेंद्र सिंह राठौर</h3><p><a href="tel:+919926732449">99267-32449</a>　|　<a href="https://wa.me/919926732449" target="_blank" rel="noopener">WhatsApp</a></p></div>
+    </div>
+    <div class="contact-card"><h3>🌿 हमारा उद्देश्य | Our Mission</h3><p>किसानों को गुणवत्तापूर्ण पौधे उपलब्ध कराना और कृषि उत्पादन को बेहतर बनाने में सहयोग देना ही हमारा उद्देश्य है।</p><br><p><strong>SHRI ANANTA GREEN NURSERY</strong></p><p>Grow Green, Grow Together!</p></div>
+  </div>
+</div></section>
+</main>
+<footer><div class="container"><h3>🌱 श्री अनंता ग्रीन नर्सरी</h3><p>SHRI ANANTA GREEN NURSERY</p><p>© 2026 All Rights Reserved.</p></div></footer>
+<a class="whatsapp" id="whatsappLink" href="https://wa.me/919926089432" target="_blank" rel="noopener">WhatsApp</a>
+<script>
+const SANTOSH_NUMBER="919926089432";
+const DHIRENDRA_NUMBER="919926732449";
+function sendBooking(event){
+  event.preventDefault();
+  const name=document.getElementById("customer").value.trim();
+  const mobile=document.getElementById("mobile").value.trim();
+  const crop=document.getElementById("crop").value;
+  const quantity=document.getElementById("quantity").value;
+  const message=document.getElementById("message").value.trim();
+  const text="नमस्ते श्री अनंता ग्रीन नर्सरी!\n\nमुझे पौधों की बुकिंग करनी है।\nनाम: "+name+"\nमोबाइल: "+mobile+"\nफसल: "+crop+"\nपौधों की संख्या: "+quantity+"\nजानकारी: "+message;
+  const encoded=encodeURIComponent(text);
+  document.getElementById("sendSantosh").href="https://wa.me/"+SANTOSH_NUMBER+"?text="+encoded;
+  document.getElementById("sendDhirendra").href="https://wa.me/"+DHIRENDRA_NUMBER+"?text="+encoded;
+  document.getElementById("bookingLinks").style.display="block";
+}
+</script>
+</body>
+</html>
